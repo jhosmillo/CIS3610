@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+div {
+    outline: 0px red solid;
+}
+body {
+    background-color: #e8e8e8;
+}
+
+
+/************ CALENDAR **************/
+
+#day-labels, #week1, #week2, #week3, #week4, #week5, #week6  {
+    /* outline: 1px solid red; */
+    clear: both;
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding; 0;
+}
+#day-labels > div {
+    width: 14.28%;
+    float: left;
+    color: white;
+    font-size: 1.5em;
+    background-color: #ffd700;
+}
+#day-labels > div > p {
+    padding: 8px 0;
+    margin: 0;
+    text-align: center;
+}
+#week1, #week2, #week3, #week4, #week5, #week6 {
+    background-color: white;
+    display: none;
+}
+.week-day {
+    position: relative;
+    float: left;
+    width: 14.28%;
+    height: 10vw;
+}
+.week-day .date-number {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 1.5em;
+}
+.calendar-row {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.calendar-row:first-of-type {
+    border-top: 1px solid #ddd;
+}
+.calendar-row > div {
+    border-right: 1px solid #ddd;
+}
+.calendar-row > div:last-of-type {
+    border-right: 0;
+}
+
+.cal-nav {
+    float: right;
+    padding: 24px 0 0 0;
+    font-size: 1.5em;
+}
+.cal-nav a:not([href]) {
+    padding: 3px 4px 4px 4px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin: 0 10px;
+    color: grey;
+}
+.cal-nav a:not([href]):hover {
+    color: #ffb7c5;
+    border-color: #ffb7c5;
+}
+
+div.tour-time {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 25%;
+    background-color: #ffb7c5 ;
+    color: white;
+    padding: 4px;
+    font-weight: bolder;
+}
+div.add-to-cart {
+    text-align: center;
+    margin-top: 2px;
+}
+div.add-to-cart input:last-of-type {
+    clear: both;
+    width: 60%;
+    margin: auto;
+}
