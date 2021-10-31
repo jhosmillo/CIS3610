@@ -146,7 +146,7 @@ function displayTour(tourSched) {
 					var calDayDiv = document.getElementById('r' + thisWeek + 'd' + thisDay);
 					calDayDiv.getElementsByTagName('div')[1].innerHTML = timeSlice + ampmSlice;
 					calDayDiv.getElementsByTagName('div')[1].setAttribute("class", "tour-time");
-					var cartDivHTML = '<form action="shopping.html"><fieldset id="calToCart"><label for="numTix">Tickets:&nbsp;</label><input name="ticket-quantity" id="numTix" type="number" value="1" step="1" min="1" max="8" /><input type="submit" value="Add to Cart" /><input type="hidden" name="location" value="' + selectedTour + '" /></fieldset></form>';
+					var cartDivHTML = '<form action="cart.html"><fieldset id="calToCart"><label for="numTix">Tickets:&nbsp;</label><input name="ticket-quantity" id="numTix" type="number" value="1" step="1" min="1" max="8" /><input type="submit" value="Add to Cart" /><input type="hidden" name="location" value="' + selectedTour + '" /></fieldset></form>';
 					var cartDiv = document.createElement('div');
 					cartDiv.innerHTML = cartDivHTML;
 					calDayDiv.appendChild(cartDiv);
@@ -175,7 +175,7 @@ function highlightLocation(loc) {
 }
 
 function setUpTour(tourName) {
-	var tourLocations = ["tokyo", "kyoto", "osaka"];
+	var tourLocations = ["Tokyo", "Kyoto", "Osaka"];
 	if (selectedTour === "") {selectedTour = tourName;}
 	switch (tourLocations.indexOf(tourName)) {
 		case 0:
@@ -199,14 +199,14 @@ function createEventListeners() {
 	var kyotoShowTours = document.getElementById('kyotoItem');
 	var osakaShowTours = document.getElementById('osakaItem');
 	if (tokyoShowTours.addEventListener) {
-		tokyoShowTours.addEventListener('click', function() {setUpTour("tokyo");}, false);
-		kyotoShowTours.addEventListener('click', function() {setUpTour("kyoto");}, false);
-		osakaShowTours.addEventListener('click', function() {setUpTour("osaka");}, false);
+		tokyoShowTours.addEventListener('click', function() {setUpTour("Tokyo");}, false);
+		kyotoShowTours.addEventListener('click', function() {setUpTour("Kyoto");}, false);
+		osakaShowTours.addEventListener('click', function() {setUpTour("Osaka");}, false);
 		
 	} else if (tokyoShowTours.attachEvent) {
-		tokyoShowTours.attachEvent('onclick', function() {setUpTour("tokyo");});
-		kyotoShowTours.attachEvent('onclick', function() {setUpTour("kyoto");});
-		osakaShowTours.attachEvent('onclick', function() {setUpTour("osaka");});
+		tokyoShowTours.attachEvent('onclick', function() {setUpTour("Tokyo");});
+		kyotoShowTours.attachEvent('onclick', function() {setUpTour("Kyoto");});
+		osakaShowTours.attachEvent('onclick', function() {setUpTour("Osaka");});
 		
 	}
 }
