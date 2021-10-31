@@ -12,13 +12,13 @@ window.onload = function(){
 	
 	switch(ticketLocation) {
   case "Tokyo":
-    price = 110;
+    price = 1100;
     break;
   case "Kyoto":
-    price = 98;
+    price = 980;
     break;
   case "Osaka":
-    price = 101;
+    price = 1010;
     break;
   default:
     price = 0;
