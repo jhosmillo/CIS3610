@@ -3,8 +3,8 @@ window.onload = function(){
 	const urlParams = new URLSearchParams(queryString);
 	const ticketQuantity = urlParams.get('ticket-quantity');
 	const ticketLocation = urlParams.get('location');
-	console.log(ticketQuantity);
-	console.log(ticketLocation);
+	
+	if(ticketLocation != null){
 	
 	let price = 0;
 	let totalP = 0;
@@ -39,7 +39,13 @@ window.onload = function(){
 	document.getElementById('cartUl').appendChild(totalLi);
 	
 	
-	
+	}else{
+		let strLiEmpty = '<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">Your cart is currently empty.</h6><small class="text-muted">Before proceeding to checkout you must add atleast one tour to your shopping cart.</small></div></li>';
+
+	let emptyLi = document.createElement('li');
+	emptyLi.innerHTML = strLiEmpty;
+	document.getElementById('cartUl').appendChild(emptyLi);
+	}
 	
 	
 	
