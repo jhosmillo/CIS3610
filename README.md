@@ -1,3 +1,3 @@
 # Web Project
-# [Link to my webpage on the Web](https://jhosmillo.github.io/LAB-7/)
+# [Project Link](https://jhosmillo.github.io/CIS3610/)
 
