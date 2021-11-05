@@ -74,7 +74,7 @@ window.onload = function setupCart(){
 		KyotoLi.innerHTML = strLiKyoto;
 		document.getElementById('cartUl').appendChild(KyotoLi);
 		totalP += kQty * kPrice;
-		sessionStorage.setItem("Tokyo", tQty);
+		sessionStorage.setItem("Kyoto", kQty);
 	}
 	
 	if(sessionStorage.getItem("Osaka")!=null && sessionStorage.getItem("Osaka")!=0){
