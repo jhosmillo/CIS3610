@@ -26,8 +26,8 @@ window.onload = function setupCart(){
 	
 	
 	//Setup Cart
-	if(localStorage.getItem("Tokyo")!=null && localStorage.getItem("Tokyo")!=0){
-		tQty = localStorage.getItem("Tokyo");
+	if(sessionStorage.getItem("Tokyo")!=null && sessionStorage.getItem("Tokyo")!=0){
+		tQty = sessionStorage.getItem("Tokyo");
 		if(tQty!=ticketQuantity && ticketLocation=="Tokyo"){
 			tQty=ticketQuantity;
 		}
@@ -39,7 +39,7 @@ window.onload = function setupCart(){
 		tokyoLi.innerHTML = strLiTokyo;
 		document.getElementById('cartUl').appendChild(tokyoLi);
 		totalP += tQty * tPrice;
-		localStorage.setItem("Tokyo", tQty);
+		sessionStorage.setItem("Tokyo", tQty);
 	}else if(ticketLocation == "Tokyo"){
 		tQty = ticketQuantity;
 		console.log(tQty+"here2");
@@ -50,11 +50,11 @@ window.onload = function setupCart(){
 		tokyoLi.innerHTML = strLiTokyo;
 		document.getElementById('cartUl').appendChild(tokyoLi);
 		totalP += tQty * tPrice;
-		localStorage.setItem("Tokyo", tQty);
+		sessionStorage.setItem("Tokyo", tQty);
 	}
 	
-	if(localStorage.getItem("Kyoto")!=null && localStorage.getItem("Kyoto")!=0){
-		kQty = localStorage.getItem("Kyoto");
+	if(sessionStorage.getItem("Kyoto")!=null && sessionStorage.getItem("Kyoto")!=0){
+		kQty = sessionStorage.getItem("Kyoto");
 		if(kQty!=ticketQuantity && ticketLocation=="Kyoto"){
 			kQty=ticketQuantity;
 		}
@@ -65,7 +65,7 @@ window.onload = function setupCart(){
 		KyotoLi.innerHTML = strLiKyoto;
 		document.getElementById('cartUl').appendChild(KyotoLi);
 		totalP += kQty * kPrice;
-		localStorage.setItem("Kyoto", kQty);
+		sessionStorage.setItem("Kyoto", kQty);
 	}else if(ticketLocation=="Kyoto"){
 		kQty = ticketQuantity;
 		let strLiKyoto = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Kyoto"><div><h6 class="my-0">Kyoto</h6><small class="text-muted"><input type="number" id="kyotoNumber" name="quantity" min="0" max="8" value='+kQty+'>   tour ticket(s)</small></div><span class="text-muted">$'+kPrice+'</span></li>';
@@ -74,11 +74,11 @@ window.onload = function setupCart(){
 		KyotoLi.innerHTML = strLiKyoto;
 		document.getElementById('cartUl').appendChild(KyotoLi);
 		totalP += kQty * kPrice;
-		localStorage.setItem("Tokyo", tQty);
+		sessionStorage.setItem("Tokyo", tQty);
 	}
 	
-	if(localStorage.getItem("Osaka")!=null && localStorage.getItem("Osaka")!=0){
-		oQty = localStorage.getItem("Osaka");
+	if(sessionStorage.getItem("Osaka")!=null && sessionStorage.getItem("Osaka")!=0){
+		oQty = sessionStorage.getItem("Osaka");
 		if(oQty!=ticketQuantity && ticketLocation=="Osaka"){
 			oQty=ticketQuantity;
 		}
@@ -91,7 +91,7 @@ window.onload = function setupCart(){
 	document.getElementById('cartUl').appendChild(OsakaLi);
 	totalP += oQty * oPrice;
 	
-	localStorage.setItem("Osaka", oQty);
+	sessionStorage.setItem("Osaka", oQty);
 	}else if(ticketLocation=="Osaka"){
 		oQty = ticketQuantity;
 		let strLiOsaka = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Osaka"><div><h6 class="my-0">Osaka</h6><small class="text-muted"><input type="number" id="osakaNumber" name="quantity" min="0" max="8" value='+oQty+'>   tour ticket(s)</small></div><span class="text-muted">$'+oPrice+'</span></li>';
@@ -100,7 +100,7 @@ window.onload = function setupCart(){
 		osakaLi.innerHTML = strLiOsaka;
 		document.getElementById('cartUl').appendChild(osakaLi);
 		totalP += oQty * oPrice;
-		localStorage.setItem("Osaka", oQty);
+		sessionStorage.setItem("Osaka", oQty);
 	}
 	
 	
@@ -122,12 +122,12 @@ window.onload = function setupCart(){
 	
 	
 	//localStorage.setItem(ticketLocation, ticketQuantity);
-	localStorage.setItem("Tokyo", tQty);
-	localStorage.setItem("Kyoto", kQty);
-	localStorage.setItem("Osaka", oQty);
-	console.log(localStorage.getItem("Tokyo"));
-	console.log(localStorage.getItem("Kyoto"));
-	console.log(localStorage.getItem("Osaka"));
+	sessionStorage.setItem("Tokyo", tQty);
+	sessionStorage.setItem("Kyoto", kQty);
+	sessionStorage.setItem("Osaka", oQty);
+	console.log(sessionStorage.getItem("Tokyo"));
+	console.log(sessionStorage.getItem("Kyoto"));
+	console.log(sessionStorage.getItem("Osaka"));
 	console.log(tQty);
 	
 	
