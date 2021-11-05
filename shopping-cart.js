@@ -20,7 +20,7 @@ window.onload = function setupCart(){
 	
 	
 	
-	if(ticketLocation != null){
+	if(ticketLocation != null || sessionStorage.getItem("Tokyo")!=null || sessionStorage.getItem("Kyoto")!=null || sessionStorage.getItem("Osaka")!=null){
 	
 	
 	
