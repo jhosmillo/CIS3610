@@ -122,9 +122,9 @@ window.onload = function setupCart(){
 	
 	
 	//localStorage.setItem(ticketLocation, ticketQuantity);
-	sessionStorage.setItem("Tokyo", tQty);
+	/*sessionStorage.setItem("Tokyo", tQty);
 	sessionStorage.setItem("Kyoto", kQty);
-	sessionStorage.setItem("Osaka", oQty);
+	sessionStorage.setItem("Osaka", oQty);*/
 	console.log(sessionStorage.getItem("Tokyo"));
 	console.log(sessionStorage.getItem("Kyoto"));
 	console.log(sessionStorage.getItem("Osaka"));
