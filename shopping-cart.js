@@ -134,7 +134,7 @@ window.onload = function setupCart(){
 
 }
 
-const input = document.querySelector('input');
+/*const input = document.querySelector('input');
 const tokyoInput = document.getElementById('totalPrice');
 
-input.addEventListener('input', setupCart);
+input.addEventListener('input', setupCart);*/
