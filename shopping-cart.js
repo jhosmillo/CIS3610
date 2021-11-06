@@ -32,7 +32,7 @@ window.onload = function setupCart(){
 			tQty=ticketQuantity;
 		}
 		console.log(tQty+"here");
-		let strLiTokyo = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Tokyo"><div><h6 class="my-0">Tokyo</h6><small class="text-muted"><input type="number" id="tokyoNumber" name="quantity" min="0" max="8" value="'+tQty+'">   tour ticket(s)</small></div><span class="text-muted">$'+tPrice+'</span></li>';
+		let strLiTokyo = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Tokyo"><div><h6 class="my-0">Tokyo</h6><small class="text-muted"><input type="number" id="tokyoNumber" name="quantity" min="0" max="8" value="'+tQty+'" onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+tPrice+'</span></li>';
 
 		let tokyoLi = document.createElement('li');
 		
@@ -43,7 +43,7 @@ window.onload = function setupCart(){
 	}else if(ticketLocation == "Tokyo"){
 		tQty = ticketQuantity;
 		console.log(tQty+"here2");
-		let strLiTokyo = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Tokyo"><div><h6 class="my-0">Tokyo</h6><small class="text-muted"><input type="number" id="tokyoNumber" name="quantity" min="0" max="8" value="'+tQty+'">   tour ticket(s)</small></div><span class="text-muted">$'+tPrice+'</span></li>';
+		let strLiTokyo = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Tokyo"><div><h6 class="my-0">Tokyo</h6><small class="text-muted"><input type="number" id="tokyoNumber" name="quantity" min="0" max="8" value="'+tQty+'" onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+tPrice+'</span></li>';
 
 		let tokyoLi = document.createElement('li');
 		
@@ -59,7 +59,7 @@ window.onload = function setupCart(){
 			kQty=ticketQuantity;
 		}
 		
-		let strLiKyoto = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Kyoto"><div><h6 class="my-0">Kyoto</h6><small class="text-muted"><input type="number" id="kyotoNumber" name="quantity" min="0" max="8" value='+kQty+'>   tour ticket(s)</small></div><span class="text-muted">$'+kPrice+'</span></li>';
+		let strLiKyoto = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Kyoto"><div><h6 class="my-0">Kyoto</h6><small class="text-muted"><input type="number" id="kyotoNumber" name="quantity" min="0" max="8" value='+kQty+' onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+kPrice+'</span></li>';
 
 		let KyotoLi = document.createElement('li');
 		KyotoLi.innerHTML = strLiKyoto;
@@ -68,7 +68,7 @@ window.onload = function setupCart(){
 		sessionStorage.setItem("Kyoto", kQty);
 	}else if(ticketLocation=="Kyoto"){
 		kQty = ticketQuantity;
-		let strLiKyoto = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Kyoto"><div><h6 class="my-0">Kyoto</h6><small class="text-muted"><input type="number" id="kyotoNumber" name="quantity" min="0" max="8" value='+kQty+'>   tour ticket(s)</small></div><span class="text-muted">$'+kPrice+'</span></li>';
+		let strLiKyoto = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Kyoto"><div><h6 class="my-0">Kyoto</h6><small class="text-muted"><input type="number" id="kyotoNumber" name="quantity" min="0" max="8" value='+kQty+' onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+kPrice+'</span></li>';
 
 		let KyotoLi = document.createElement('li');
 		KyotoLi.innerHTML = strLiKyoto;
@@ -83,7 +83,7 @@ window.onload = function setupCart(){
 			oQty=ticketQuantity;
 		}
 		
-		let strLiOsaka = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Osaka"><div><h6 class="my-0">Osaka</h6><small class="text-muted"><input type="number" id="OsakaNumber" name="quantity" min="0" max="8" value='+oQty+'>   tour ticket(s)</small></div><span class="text-muted">$'+oPrice+'</span></li>';
+		let strLiOsaka = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Osaka"><div><h6 class="my-0">Osaka</h6><small class="text-muted"><input type="number" id="OsakaNumber" name="quantity" min="0" max="8" value='+oQty+' onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+oPrice+'</span></li>';
 
 
 	let OsakaLi = document.createElement('li');
@@ -94,7 +94,7 @@ window.onload = function setupCart(){
 	sessionStorage.setItem("Osaka", oQty);
 	}else if(ticketLocation=="Osaka"){
 		oQty = ticketQuantity;
-		let strLiOsaka = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Osaka"><div><h6 class="my-0">Osaka</h6><small class="text-muted"><input type="number" id="osakaNumber" name="quantity" min="0" max="8" value='+oQty+'>   tour ticket(s)</small></div><span class="text-muted">$'+oPrice+'</span></li>';
+		let strLiOsaka = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Osaka"><div><h6 class="my-0">Osaka</h6><small class="text-muted"><input type="number" id="osakaNumber" name="quantity" min="0" max="8" value='+oQty+' onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+oPrice+'</span></li>';
 
 		let osakaLi = document.createElement('li');
 		osakaLi.innerHTML = strLiOsaka;
@@ -105,7 +105,7 @@ window.onload = function setupCart(){
 	
 	
 	let totalLi = document.createElement('li');
-	let strTotal = '<li class="list-group-item d-flex justify-content-between"><span id="totalPrice">Total (USD)</span><strong>$'+totalP+'</strong></li>';
+	let strTotal = '<li class="list-group-item d-flex justify-content-between"><span id="totalPrice">Total (USD)</span><strong id="totalTourPrice">$'+totalP+'</strong></li>';
 	totalLi.innerHTML = strTotal;
 	document.getElementById('cartUl').appendChild(totalLi);
 	
@@ -125,11 +125,20 @@ window.onload = function setupCart(){
 	/*sessionStorage.setItem("Tokyo", tQty);
 	sessionStorage.setItem("Kyoto", kQty);
 	sessionStorage.setItem("Osaka", oQty);*/
+	
 	console.log(sessionStorage.getItem("Tokyo"));
 	console.log(sessionStorage.getItem("Kyoto"));
 	console.log(sessionStorage.getItem("Osaka"));
 	console.log(tQty);
-	
+	if(sessionStorage.getItem("Tokyo")== 0){
+		updateCartValue();
+	}
+	if(sessionStorage.getItem("Kyoto")== 0){
+		updateCartValue();
+	}
+	if(sessionStorage.getItem("Osaka")== 0){
+		updateCartValue();
+	}
 	
 
 }
