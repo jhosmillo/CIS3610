@@ -15,7 +15,7 @@ const queryString = window.location.search;
 	let tQty  = 0;
 	let kQty = 0 ;
 	let oQty = 0;
-	console.log(ticketLocation);
+	
 window.onload = function setupCart(){
 	
 	
@@ -109,9 +109,7 @@ window.onload = function setupCart(){
 	totalLi.innerHTML = strTotal;
 	document.getElementById('cartUl').appendChild(totalLi);
 	
-	/*localStorage.setItem("Tokyo", tQty);
-	localStorage.setItem("Kyoto", kQty);
-	localStorage.setItem("Osaka", oQty);*/
+	
 	}else{
 		let strLiEmpty = '<li class="list-group-item d-flex justify-content-between lh-condensed"><div><h6 class="my-0">Your cart is currently empty.</h6><small class="text-muted">Before proceeding to checkout you must add atleast one tour to your shopping cart.</small></div></li>';
 
@@ -121,15 +119,8 @@ window.onload = function setupCart(){
 	}
 	
 	
-	//localStorage.setItem(ticketLocation, ticketQuantity);
-	/*sessionStorage.setItem("Tokyo", tQty);
-	sessionStorage.setItem("Kyoto", kQty);
-	sessionStorage.setItem("Osaka", oQty);*/
 	
-	console.log(sessionStorage.getItem("Tokyo"));
-	console.log(sessionStorage.getItem("Kyoto"));
-	console.log(sessionStorage.getItem("Osaka"));
-	console.log(tQty);
+	
 	if(sessionStorage.getItem("Tokyo")== 0){
 		updateCartValue();
 	}
@@ -143,7 +134,4 @@ window.onload = function setupCart(){
 
 }
 
-/*const input = document.querySelector('input');
-const tokyoInput = document.getElementById('totalPrice');
 
-input.addEventListener('input', setupCart);*/
