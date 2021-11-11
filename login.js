@@ -1,9 +1,9 @@
 function loginUser(){
 	let userName= document.getElementById("username").value;
 	sessionStorage.setItem("UserName", userName);
-	window.location.reload();
-
+	if(sessionStorage.getItem("UserName")!=null && sessionStorage.getItem("UserName")!= ""){
+		window.location.reload();
+	}
 }
-
 
 
