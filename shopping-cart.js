@@ -31,7 +31,7 @@ window.onload = function setupCart(){
 		if(tQty!=ticketQuantity && ticketLocation=="Tokyo"){
 			tQty=ticketQuantity;
 		}
-		console.log(tQty+"here");
+		
 		let strLiTokyo = '<li class="list-group-item d-flex justify-content-between lh-condensed" id="Tokyo"><div><h6 class="my-0">Tokyo</h6><small class="text-muted"><input type="number" id="tokyoNumber" name="quantity" min="0" max="8" value="'+tQty+'" onchange="updateCartValue()">   tour ticket(s)</small></div><span class="text-muted">$'+tPrice+'</span></li>';
 
 		let tokyoLi = document.createElement('li');

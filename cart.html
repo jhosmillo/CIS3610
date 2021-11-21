@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html #ourtours">Our Tours</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#ourtours">Our Tours</a></li>
                         <li class="nav-item"><a class="nav-link" href="book-tour.html">Book a Tour</a></li>
                         <li class="nav-item"><a class="nav-link" href="#top">Cart</a></li>
 						<li class="nav-item" id="signinNav"><a class="nav-link" href="#" id="SignIn" data-toggle="modal" data-target="#modalLoginForm">Sign In</a></li>
@@ -113,7 +113,7 @@
         </div>
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Billing address</h4>
-          <form class="needs-validation" novalidate>
+          <form action="thank-you.html" method="POST">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -234,15 +234,7 @@
               </div>
             </div>
             <hr class="mb-4">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="same-address">
-              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="save-info">
-              <label class="custom-control-label" for="save-info">Save this information for next time</label>
-            </div>
-            <hr class="mb-4">
+            
 
             <h4 class="mb-3">Payment</h4>
 
@@ -254,10 +246,6 @@
               <div class="custom-control custom-radio">
                 <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
                 <label class="custom-control-label" for="debit">Debit card</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="paypal">Paypal</label>
               </div>
             </div>
             <div class="row">
@@ -294,7 +282,7 @@
               </div>
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="orderBtn" onclick="orderTicket();">Purchase Ticket</button>
           </form>
         </div>
       </div>
@@ -364,6 +352,7 @@
 	   <script type="text/javascript" src="logout.js"></script>
 	   <script type="text/javascript" src="shopping-cart.js"></script>
 	   <script type="text/javascript" src="update_cart.js"></script>
+	   <script type="text/javascript" src="placeOrder.js"></script>
        
 	  
         <!-- Bootstrap core JS-->
