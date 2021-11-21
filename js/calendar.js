@@ -35,12 +35,12 @@ function lastMonth() {
 }
 
 function eraseCalendar() {
-	var n = 6;
+	let n = 6;
 	while (n > 0){
-		var weekRow = document.getElementById('week' + n);
+		let weekRow = document.getElementById('week' + n);
 		if (weekRow.style.display === "block") {
 			for (i = 7; i >= 1; i--) {
-				var calDayDiv = document.getElementById('r' + n + 'd' + i);
+				let calDayDiv = document.getElementById('r' + n + 'd' + i);
 				calDayDiv.getElementsByTagName('div')[0].innerHTML = "";
 				calDayDiv.getElementsByTagName('div')[1].innerHTML = "";
 				calDayDiv.getElementsByTagName('div')[1].removeAttribute("class");
@@ -57,38 +57,39 @@ function eraseCalendar() {
 function fillCalendar() {
 
 	// determine beginning of current month
-	console.log('Getting info for: ' + currentMonth + " 01, " + currentYear);
-	var thisMonth = new Date(currentMonth + " 01, " + currentYear);
+	
+	let thisMonth = new Date(currentMonth + " 01, " + currentYear);
 
 	// write current month & year above calendar
 	document.getElementById('monthEntry').innerHTML = monthsOfYear[thisMonth.getMonth()] + " " + thisMonth.getFullYear();
 
 	// set the day index of the first day of the current month
-	var dayOneIs = thisMonth.getDay();
-	console.log('First day position is: ' + dayOneIs);
+	let dayOneIs = thisMonth.getDay();
+	
 
 	// determine how many days are in the current month
 	thisMonth.setDate(32)
-	var dayNum = thisMonth.getDate();
+	let dayNum = thisMonth.getDate();
+	let totalDays;
 	switch (dayNum) {
 	    case 1:
-	        var totalDays = 31;
+	        totalDays = 31;
 	        break;
 	    case 2:
-	        var totalDays = 30;
+	        totalDays = 30;
 	        break;
 	    case 3:
-	        var totalDays = 29;
+	        totalDays = 29;
 	        break;
 	    case 4:
-	        var totalDays = 28;
+	        totalDays = 28;
 	        break;
 	}
 
 	// fill in calendar
-	var i = 1;
-	var thisDay = dayOneIs;
-	var monthDate = 1;
+	let i = 1;
+	let thisDay = dayOneIs;
+	let monthDate = 1;
 	while (monthDate <= totalDays) {
 	    document.getElementById('week' + i).style.display = "block";
 	    while (thisDay < 7 && monthDate <= totalDays) {
@@ -106,13 +107,13 @@ function fillCalendar() {
 //////////////////////////
 
 // set month & day arrays
-var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-// get current month info & set variables
-var currentDate = new Date();
-console.log(currentDate);
-var monthNum = currentDate.getMonth(); // getMonth() provides number 0-11 for month of the year
-var currentMonth = monthsOfYear[monthNum];
-var currentYear = currentDate.getFullYear(); // getFullYear() returns the 4-digit year
+// get current month info & set letiables
+let currentDate = new Date();
+
+let monthNum = currentDate.getMonth(); // getMonth() provides number 0-11 for month of the year
+let currentMonth = monthsOfYear[monthNum];
+let currentYear = currentDate.getFullYear(); // getFullYear() returns the 4-digit year
 fillCalendar();
