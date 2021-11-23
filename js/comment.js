@@ -2,7 +2,7 @@ function processForm() {
 	// Prevent the form from submitting
     event.preventDefault();
 	let userName = document.getElementById('name').value;
-	let userMsg = "Thanks " +userName+ ", well get back to you shortly."
+	let userMsg = "Thanks " +userName+ ", we'll get back to you shortly!"
 
 	//Set message
 	document.getElementById("message").innerHTML = userMsg;
